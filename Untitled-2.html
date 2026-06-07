@@ -1,0 +1,163 @@
+<div id="launch-options" class="launch-options">
+
+    <h2>Параметры запуска DOTA 2</h2>
+
+    <div class="launch-box">
+
+        <code id="launchText">
+-novid -high -map dota -prewarm -nod3d9ex -nohltv -novr -dx11 +dota_embers 0 +map_enable_background_maps 0
+        </code>
+
+        <button onclick="copyLaunchOptions()" class="copy-btn">
+            Скопировать параметры
+        </button>
+
+    </div>
+
+    <div class="launch-grid">
+
+        <div class="launch-card">
+            <b>-novid</b>
+            <span>
+                Пропуск заставки Valve при запуске игры,
+                ускоряет загрузку.
+            </span>
+        </div>
+
+        <div class="launch-card">
+            <b>-high</b>
+            <span>
+                Устанавливает высокий приоритет Dota 2,
+                улучшает плавность.
+            </span>
+        </div>
+
+        <div class="launch-card">
+            <b>-map dota</b>
+            <span>
+                Предзагружает карту,
+                сокращает загрузку матча.
+            </span>
+        </div>
+
+        <div class="launch-card">
+            <b>-prewarm</b>
+            <span>
+                Загружает ресурсы заранее,
+                уменьшает фризы.
+            </span>
+        </div>
+
+        <div class="launch-card">
+            <b>-nod3d9ex</b>
+            <span>
+                Улучшает производительность
+                в оконном режиме.
+            </span>
+        </div>
+
+        <div class="launch-card">
+            <b>-nohltv</b>
+            <span>
+                Отключает HLTV,
+                освобождает ресурсы.
+            </span>
+        </div>
+
+        <div class="launch-card">
+            <b>-novr</b>
+            <span>
+                Отключает поддержку VR,
+                уменьшает использование RAM.
+            </span>
+        </div>
+
+        <div class="launch-card">
+            <b>-dx11 / -vulkan</b>
+            <span>
+                DX11 — лучше для NVIDIA,
+                Vulkan — лучше для AMD/Linux.
+            </span>
+        </div>
+
+        <div class="launch-card">
+            <b>+dota_embers 0</b>
+            <span>
+                Убирает частицы
+                в главном меню.
+            </span>
+        </div>
+
+        <div class="launch-card">
+            <b>+map_enable_background_maps 0</b>
+            <span>
+                Отключает анимированное меню,
+                снижает нагрузку на GPU.
+            </span>
+        </div>
+
+    </div>
+
+</div>
+<style>
+
+.launch-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+    margin-top:25px;
+}
+
+.launch-card{
+
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    border-radius:14px;
+
+    padding:15px;
+
+    transition:0.25s;
+}
+
+.launch-card:hover{
+
+    transform:translateY(-2px);
+
+    background:rgba(255,255,255,0.05);
+}
+
+.launch-card b{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#4be3c2;
+
+    font-size:16px;
+}
+
+.launch-card span{
+
+    color:#b8c7d9;
+
+    line-height:1.5;
+
+    font-size:14px;
+}
+
+@media(max-width:700px){
+
+    .launch-grid{
+
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
